@@ -33404,7 +33404,7 @@ return A.G($async$a5e,r)},
 a5s(){var s=0,r=A.H(t.z),q,p=2,o,n,m,l,k,j,i,h
 var $async$a5s=A.I(function(a,b){if(a===1){o=b
 s=p}while(true)switch(s){case 0:p=4
-n=A.bJ("https://rest-api-node-js-express-sql-server.vercel.app/api/products//getTop5SellingProduct",0,null)
+n=A.bJ("https://rest-api-node-js-express-sql-server.vercel.app/api/products/getTop5SellingProduct",0,null)
 s=7
 return A.O(A.dp(n),$async$a5s)
 case 7:m=b
