@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/">
+  <base href="/deploy_inv_mangement/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -34,11 +34,56 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1987884881";
+    const serviceWorkerVersion = "1849549255";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
   <style>
+    .relative {
+      position: relative;
+    }
+
+    .loader-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -120px 0 0 -120px;
+      width: 240px;
+      height: 240px;
+    }
+
+    .loader-ring-light {
+      width: 240px;
+      height: 240px;
+      border-radius: 240px;
+      box-shadow: 0 4px 0 #00abf2 inset;
+      animation: rotate-360 2s linear infinite;
+    }
+
+    .loader-ring-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 240px;
+      border-radius: 240px;
+      box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
+    }
+
+    @keyframes rotate-360 {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    body {
+      background-color: rgba(0, 0, 0, 0.87);
+    }
+  </style>
+  <!-- <style>
     body {
       background:#000;
     }
@@ -224,10 +269,14 @@
         opacity:0;
       }
     }
-      </style>
+      </style> -->
 </head>
 <body>
-  <div id="load">
+  <div class='loader-ring'>
+    <div class='loader-ring-light'></div>
+    <div class='loader-ring-track'></div>
+  </div>
+  <!-- <div id="load">
     <div>L</div>
     <div>O</div>
     <div>A</div>
@@ -235,7 +284,7 @@
     <div>I</div>
     <div>N</div>
     <div>G</div>
-  </div>
+  </div> -->
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
